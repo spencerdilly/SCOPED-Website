@@ -378,6 +378,11 @@
         gap: 3rem !important;
       }
       .about-graph-col { display: none !important; }
+      .founder-grid {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+      }
+      .founder-img-col { max-width: 320px; }
     }
 
     @media (min-width: 641px) and (max-width: 900px) {
@@ -396,7 +401,7 @@
         <span style="font-family:'DM Sans', sans-serif;font-weight:700;font-size:1rem;letter-spacing:-0.01em;color:#0C0C0B;">SCOPED</span>
       </a>
       <div style="display:flex;align-items:center;gap:2rem;">
-        <a href="#about" class="nav-link nav-about">About</a>
+        <a href="#founder" class="nav-link nav-about">About</a>
         <a href="#contact" class="btn-primary" style="padding:0.5rem 1.25rem;font-size:0.8125rem;">Get in touch</a>
       </div>
     </div>
@@ -640,6 +645,85 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER / ABOUT ME -->
+  <section id="founder" style="max-width:1200px;margin:0 auto;padding:2rem 2rem 6rem;">
+    <hr class="rule sr" style="margin-bottom:6rem;" />
+    <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:7rem;align-items:start;" class="founder-grid">
+
+      <!-- Portrait / visual -->
+      <div class="founder-img-col sr-left">
+        <div style="border-radius:24px;overflow:hidden;aspect-ratio:3/4;background:#EDECEA;position:relative;">
+          <img src="https://placehold.co/600x800/EDECEA/8A8A82?text=Spencer+Dilworth" alt="Spencer Dilworth" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(12,12,11,0.28) 0%, transparent 55%);pointer-events:none;"></div>
+        </div>
+        <!-- Credential pills -->
+        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.25rem;">
+          <span style="display:inline-flex;align-items:center;gap:0.4rem;background:#EFEDE7;border-radius:100px;padding:0.4rem 0.875rem;font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;color:#5A5A54;border:1px solid #E8E7E1;">
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M6 1l1.4 3h3.1L7.7 6.2l1 3.2L6 7.5l-2.7 1.9 1-3.2L1.5 4H4.6z" stroke="#8A8A82" stroke-width="1.1" stroke-linejoin="round"/></svg>
+            Venture-backed startups
+          </span>
+          <span style="display:inline-flex;align-items:center;gap:0.4rem;background:#EFEDE7;border-radius:100px;padding:0.4rem 0.875rem;font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;color:#5A5A54;border:1px solid #E8E7E1;">
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#8A8A82" stroke-width="1.1"/><path d="M4 6l1.5 1.5L8 4" stroke="#8A8A82" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Multiple founder exits
+          </span>
+          <span style="display:inline-flex;align-items:center;gap:0.4rem;background:#EFEDE7;border-radius:100px;padding:0.4rem 0.875rem;font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;color:#5A5A54;border:1px solid #E8E7E1;">
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><rect x="1" y="4" width="10" height="7" rx="1.5" stroke="#8A8A82" stroke-width="1.1"/><path d="M4 4V3a2 2 0 114 0v1" stroke="#8A8A82" stroke-width="1.1" stroke-linecap="round"/></svg>
+            AI & automation
+          </span>
+        </div>
+      </div>
+
+      <!-- Text content -->
+      <div>
+        <p class="section-label sr" style="margin-bottom:1.25rem;">About me</p>
+        <h2 class="sr" style="font-family:'DM Sans',sans-serif;font-weight:800;font-size:clamp(2rem,4vw,2.75rem);letter-spacing:-0.035em;line-height:1.05;color:#3D3D3A;margin-bottom:1.75rem;transition-delay:0.08s;">
+          I've been inside the<br/>rooms that matter.
+        </h2>
+        <p class="sr" style="font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:300;line-height:1.8;color:#5A5A54;margin-bottom:1.25rem;transition-delay:0.16s;">
+          I'm Spencer. I've spent my career embedded with venture-backed startups and working alongside founders who've built and exited companies — from early-stage hustle to liquidity events. That experience taught me how fast-moving teams actually operate, and where the biggest leverage points are.
+        </p>
+        <p class="sr" style="font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:300;line-height:1.8;color:#5A5A54;margin-bottom:2.5rem;transition-delay:0.22s;">
+          Now I'm bringing that same operator mindset to AI. SCOPED exists because I kept seeing the same pattern: smart teams drowning in noise, missing the signal, falling behind. I built this to change that — helping founders and business leaders cut through the hype and put AI to work where it actually counts.
+        </p>
+
+        <!-- Experience highlights -->
+        <div style="display:flex;flex-direction:column;gap:0;" class="sr" style="transition-delay:0.28s;">
+
+          <div class="sr" style="display:flex;align-items:flex-start;gap:1rem;padding:1.125rem 0;border-top:1px solid #E8E7E1;transition-delay:0.28s;">
+            <div style="width:32px;height:32px;background:#EFEDE7;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 12l3.5-3.5 3 3L13 5" stroke="#3D3D3A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <div style="font-family:'DM Sans',sans-serif;font-weight:600;font-size:0.9375rem;color:#3D3D3A;margin-bottom:0.2rem;">Worked with VC-backed startups</div>
+              <div style="font-family:'DM Sans',sans-serif;font-size:0.875rem;color:#8A8A82;line-height:1.6;">Operated inside high-growth companies backed by institutional capital — from seed through growth stages — where speed and focus are everything.</div>
+            </div>
+          </div>
+
+          <div class="sr" style="display:flex;align-items:flex-start;gap:1rem;padding:1.125rem 0;border-top:1px solid #E8E7E1;transition-delay:0.36s;">
+            <div style="width:32px;height:32px;background:#EFEDE7;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2v2M4.22 4.22l1.42 1.42M2 8h2M4.22 11.78l1.42-1.42M8 14v-2M11.78 11.78l-1.42-1.42M14 8h-2M11.78 4.22l-1.42 1.42" stroke="#3D3D3A" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <div style="font-family:'DM Sans',sans-serif;font-weight:600;font-size:0.9375rem;color:#3D3D3A;margin-bottom:0.2rem;">Backed founders through exits</div>
+              <div style="font-family:'DM Sans',sans-serif;font-size:0.875rem;color:#8A8A82;line-height:1.6;">Partnered with serial entrepreneurs who've taken companies from zero to acquisition — I know what disciplined execution looks like at every stage.</div>
+            </div>
+          </div>
+
+          <div class="sr" style="display:flex;align-items:flex-start;gap:1rem;padding:1.125rem 0;border-top:1px solid #E8E7E1;border-bottom:1px solid #E8E7E1;transition-delay:0.44s;">
+            <div style="width:32px;height:32px;background:#EFEDE7;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="10" rx="2" stroke="#3D3D3A" stroke-width="1.5"/><path d="M5 7h6M5 10h4" stroke="#3D3D3A" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <div style="font-family:'DM Sans',sans-serif;font-weight:600;font-size:0.9375rem;color:#3D3D3A;margin-bottom:0.2rem;">Building SCOPED</div>
+              <div style="font-family:'DM Sans',sans-serif;font-size:0.875rem;color:#8A8A82;line-height:1.6;">Launched SCOPED to bring that same operator-first thinking to AI — giving businesses the clarity and capability to actually move, not just observe.</div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </section>
