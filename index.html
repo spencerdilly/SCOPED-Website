@@ -427,129 +427,43 @@
       </div>
     </div>
 
-    <!-- Hero visual: Browser window -->
-    <div class="hero-win-wrap" style="margin-top:5rem;perspective:1400px;padding:0 1rem;">
-      <div class="hero-window" style="
-        background:#F7F6F2;
-        border-radius:14px;
-        overflow:hidden;
-        transform-style: preserve-3d;
-        box-shadow:
-          0 2px 4px rgba(0,0,0,0.03),
-          0 8px 24px rgba(0,0,0,0.07),
-          0 24px 48px rgba(61,61,58,0.09),
-          0 40px 72px rgba(61,61,58,0.1),
-          0 0 0 1px rgba(61,61,58,0.08);
-        transition: transform 0.4s ease, box-shadow 0.4s ease;
-      " onmouseover="this.style.transform='rotateX(-2deg) translateY(-10px)';this.style.boxShadow='0 2px 4px rgba(0,0,0,0.03),0 12px 32px rgba(0,0,0,0.09),0 32px 64px rgba(61,61,58,0.11),0 56px 90px rgba(61,61,58,0.12),0 0 0 1px rgba(61,61,58,0.08)'"
-        onmouseout="this.style.transform='rotateX(-3deg) translateY(-6px)';this.style.boxShadow='0 2px 4px rgba(0,0,0,0.03),0 8px 24px rgba(0,0,0,0.07),0 24px 48px rgba(61,61,58,0.09),0 40px 72px rgba(61,61,58,0.1),0 0 0 1px rgba(61,61,58,0.08)'" id="hero-win"
+    <!-- Hero visual: 3-step graphic -->
+    <div class="hero-win-wrap" style="margin-top:5rem;padding:0 1rem;">
+      <div class="hero-window" style="border-radius:14px;overflow:visible;" id="hero-win"
       >
 
-        <!-- Title bar -->
-        <div style="background:#F0EFE9;padding:0.65rem 1rem;display:flex;align-items:center;gap:0.375rem;border-bottom:1px solid #E8E7E1;">
-          <div style="width:10px;height:10px;background:#FF5F57;border-radius:50%;flex-shrink:0;"></div>
-          <div style="width:10px;height:10px;background:#FEBC2E;border-radius:50%;flex-shrink:0;"></div>
-          <div style="width:10px;height:10px;background:#28C840;border-radius:50%;flex-shrink:0;"></div>
-          <span style="font-family:'DM Sans',sans-serif;font-size:0.6875rem;font-weight:500;color:#B8B7B0;margin:0 auto;">AI Workflow Builder</span>
-        </div>
+        <!-- 3-step cards -->
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;padding:0;">
 
-        <!-- Window body -->
-        <div class="browser-body" style="display:flex;height:280px;">
+          <!-- Step 1 -->
+          <div style="background:#F7F6F2;border:1px solid #E8E7E1;border-radius:16px;padding:2.25rem 2rem;position:relative;overflow:hidden;
+            box-shadow:0 1px 3px rgba(61,61,58,0.04),0 4px 16px rgba(61,61,58,0.06);">
+            <div style="position:absolute;top:0;left:0;right:0;height:3px;background:#3D3D3A;border-radius:16px 16px 0 0;"></div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:0.6875rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#B8B7B0;margin-bottom:1.25rem;">01</div>
+            <h3 style="font-family:'DM Sans',sans-serif;font-size:1.25rem;font-weight:800;letter-spacing:-0.03em;color:#3D3D3A;line-height:1.15;margin-bottom:0.75rem;">Discover</h3>
+            <p style="font-family:'DM Sans',sans-serif;font-size:0.875rem;font-weight:300;line-height:1.7;color:#5A5A54;margin:0;">We learn your business from the inside out — studying your workflows, your team, and where time is being lost.</p>
+          </div>
 
-          <!-- Abstract graphic -->
-          <div class="wf-canvas" style="flex:1;overflow:hidden;position:relative;background:#F7F6F2;">
-            <svg width="100%" height="100%" viewBox="0 0 800 243" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <style>
-                  .n-pulse { animation: nodePulse 3.8s ease-in-out infinite; }
-                  .n-pulse2 { animation: nodePulse 3.8s ease-in-out infinite 0.9s; }
-                  .n-pulse3 { animation: nodePulse 3.8s ease-in-out infinite 1.8s; }
-                  .n-pulse4 { animation: nodePulse 3.8s ease-in-out infinite 2.6s; }
-                  .edge-flow { animation: edgeFade 3.8s ease-in-out infinite; }
-                  .edge-flow2 { animation: edgeFade 3.8s ease-in-out infinite 1.2s; }
-                  .edge-flow3 { animation: edgeFade 3.8s ease-in-out infinite 2.4s; }
-                  @keyframes nodePulse {
-                    0%, 100% { opacity: 1; transform: scale(1); }
-                    50% { opacity: 0.55; transform: scale(0.88); }
-                  }
-                  @keyframes edgeFade {
-                    0%, 100% { opacity: 0.18; }
-                    50% { opacity: 0.5; }
-                  }
-                </style>
-                <radialGradient id="bg-glow" cx="50%" cy="50%" r="55%">
-                  <stop offset="0%" stop-color="#EFEDE7" stop-opacity="0.7"/>
-                  <stop offset="100%" stop-color="#F7F6F2" stop-opacity="0"/>
-                </radialGradient>
-              </defs>
+          <!-- Connector -->
+          <style>
+            .step-connector { display:flex;align-items:center;justify-content:center;position:absolute; }
+          </style>
 
-              <!-- Subtle background glow -->
-              <ellipse cx="400" cy="121" rx="340" ry="140" fill="url(#bg-glow)"/>
+          <!-- Step 2 -->
+          <div style="background:#F7F6F2;border:1px solid #E8E7E1;border-radius:16px;padding:2.25rem 2rem;position:relative;overflow:hidden;
+            box-shadow:0 1px 3px rgba(61,61,58,0.04),0 4px 16px rgba(61,61,58,0.06);">
+            <div style="position:absolute;top:0;left:0;right:0;height:3px;background:#3D3D3A;border-radius:16px 16px 0 0;"></div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:0.6875rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#B8B7B0;margin-bottom:1.25rem;">02</div>
+            <h3 style="font-family:'DM Sans',sans-serif;font-size:1.25rem;font-weight:800;letter-spacing:-0.03em;color:#3D3D3A;line-height:1.15;margin-bottom:0.75rem;">Identify</h3>
+            <p style="font-family:'DM Sans',sans-serif;font-size:0.875rem;font-weight:300;line-height:1.7;color:#5A5A54;margin:0;">We pinpoint exactly where AI can take over — the repetitive, the manual, the work that shouldn't need a human.</p>
+          </div>
 
-              <!-- Edges — drawn first so nodes sit on top -->
-              <line class="edge-flow"  x1="134" y1="60"  x2="268" y2="105" stroke="#3D3D3A" stroke-width="1" stroke-linecap="round"/>
-              <line class="edge-flow2" x1="268" y1="105" x2="400" y2="72"  stroke="#3D3D3A" stroke-width="1" stroke-linecap="round"/>
-              <line class="edge-flow"  x1="268" y1="105" x2="390" y2="168" stroke="#3D3D3A" stroke-width="1" stroke-linecap="round"/>
-              <line class="edge-flow3" x1="400" y1="72"  x2="530" y2="52"  stroke="#3D3D3A" stroke-width="1" stroke-linecap="round"/>
-              <line class="edge-flow2" x1="400" y1="72"  x2="532" y2="138" stroke="#3D3D3A" stroke-width="1" stroke-linecap="round"/>
-              <line class="edge-flow"  x1="390" y1="168" x2="532" y2="138" stroke="#3D3D3A" stroke-width="1" stroke-linecap="round"/>
-              <line class="edge-flow3" x1="532" y1="138" x2="666" y2="110" stroke="#3D3D3A" stroke-width="1" stroke-linecap="round"/>
-              <line class="edge-flow2" x1="530" y1="52"  x2="666" y2="110" stroke="#3D3D3A" stroke-width="1" stroke-linecap="round"/>
-              <line class="edge-flow"  x1="390" y1="168" x2="480" y2="198" stroke="#3D3D3A" stroke-width="1" stroke-linecap="round"/>
-              <line class="edge-flow3" x1="134" y1="60"  x2="110" y2="148" stroke="#3D3D3A" stroke-width="1" stroke-linecap="round"/>
-              <line class="edge-flow2" x1="110" y1="148" x2="268" y2="105" stroke="#3D3D3A" stroke-width="1" stroke-linecap="round"/>
-              <line class="edge-flow"  x1="666" y1="110" x2="720" y2="175" stroke="#3D3D3A" stroke-width="1" stroke-linecap="round"/>
-
-              <!-- Faint small satellite nodes -->
-              <circle cx="58"  cy="88"  r="3" fill="none" stroke="#C8C6BF" stroke-width="1.2"/>
-              <circle cx="740" cy="58"  r="3" fill="none" stroke="#C8C6BF" stroke-width="1.2"/>
-              <circle cx="192" cy="188" r="3" fill="none" stroke="#C8C6BF" stroke-width="1.2"/>
-              <circle cx="620" cy="195" r="3" fill="none" stroke="#C8C6BF" stroke-width="1.2"/>
-
-              <!-- Primary nodes — outlined / light -->
-              <g class="n-pulse3">
-                <circle cx="134" cy="60"  r="14" fill="#F0EFE9" stroke="#D4D2CB" stroke-width="1.5"/>
-                <circle cx="134" cy="60"  r="5"  fill="#B8B7B0"/>
-              </g>
-              <g class="n-pulse2">
-                <circle cx="268" cy="105" r="18" fill="#EFEDE7" stroke="#D4D2CB" stroke-width="1.5"/>
-                <circle cx="268" cy="105" r="6"  fill="#8A8A82"/>
-              </g>
-              <g class="n-pulse4">
-                <circle cx="390" cy="168" r="13" fill="#F0EFE9" stroke="#D4D2CB" stroke-width="1.5"/>
-                <circle cx="390" cy="168" r="4.5" fill="#B8B7B0"/>
-              </g>
-              <g class="n-pulse3">
-                <circle cx="530" cy="52"  r="12" fill="#F0EFE9" stroke="#D4D2CB" stroke-width="1.5"/>
-                <circle cx="530" cy="52"  r="4"  fill="#B8B7B0"/>
-              </g>
-              <g class="n-pulse2">
-                <circle cx="480" cy="198" r="10" fill="#F0EFE9" stroke="#D4D2CB" stroke-width="1.5"/>
-                <circle cx="480" cy="198" r="3.5" fill="#C8C6BF"/>
-              </g>
-              <g class="n-pulse4">
-                <circle cx="720" cy="175" r="11" fill="#F0EFE9" stroke="#D4D2CB" stroke-width="1.5"/>
-                <circle cx="720" cy="175" r="4"  fill="#B8B7B0"/>
-              </g>
-              <g class="n-pulse3">
-                <circle cx="110" cy="148" r="10" fill="#F0EFE9" stroke="#D4D2CB" stroke-width="1.5"/>
-                <circle cx="110" cy="148" r="3.5" fill="#C8C6BF"/>
-              </g>
-
-              <!-- Accent nodes — dark / prominent -->
-              <g class="n-pulse">
-                <circle cx="400" cy="72"  r="22" fill="#3D3D3A" opacity="0.92"/>
-                <circle cx="400" cy="72"  r="9"  fill="#F7F6F2"/>
-              </g>
-              <g class="n-pulse2">
-                <circle cx="532" cy="138" r="19" fill="#3D3D3A" opacity="0.85"/>
-                <circle cx="532" cy="138" r="7"  fill="#F7F6F2"/>
-              </g>
-              <g class="n-pulse3">
-                <circle cx="666" cy="110" r="16" fill="#3D3D3A" opacity="0.8"/>
-                <circle cx="666" cy="110" r="6"  fill="#F7F6F2"/>
-              </g>
-            </svg>
+          <!-- Step 3 -->
+          <div style="background:#3D3D3A;border:1px solid #3D3D3A;border-radius:16px;padding:2.25rem 2rem;position:relative;overflow:hidden;
+            box-shadow:0 1px 3px rgba(61,61,58,0.08),0 8px 32px rgba(61,61,58,0.18);">
+            <div style="font-family:'DM Sans',sans-serif;font-size:0.6875rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,246,242,0.35);margin-bottom:1.25rem;">03</div>
+            <h3 style="font-family:'DM Sans',sans-serif;font-size:1.25rem;font-weight:800;letter-spacing:-0.03em;color:#F7F6F2;line-height:1.15;margin-bottom:0.75rem;">Build</h3>
+            <p style="font-family:'DM Sans',sans-serif;font-size:0.875rem;font-weight:300;line-height:1.7;color:rgba(247,246,242,0.65);margin:0;">We engineer the tools and automations that run it — so your business moves faster without adding headcount.</p>
           </div>
 
         </div>
