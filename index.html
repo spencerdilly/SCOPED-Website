@@ -218,6 +218,22 @@
       z-index: 0;
     }
     .hero-wrapper:hover .hero-glow { opacity: 1; }
+    .hero-blob {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -52%);
+      width: 680px;
+      height: 480px;
+      background: radial-gradient(ellipse at center,
+        rgba(168, 148, 210, 0.13) 0%,
+        rgba(180, 160, 220, 0.07) 35%,
+        transparent 70%
+      );
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(32px);
+    }
 
     /* Scroll reveal base states */
     .sr {
@@ -409,6 +425,7 @@
 
   <!-- HERO -->
   <div class="hero-wrapper">
+    <div class="hero-blob"></div>
     <div class="hero-glow"></div>
   <section class="hero-section" style="padding:160px 2rem 100px;max-width:1200px;margin:0 auto;position:relative;z-index:1;">
     <div style="text-align:center;max-width:820px;margin:0 auto;">
