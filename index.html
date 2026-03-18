@@ -206,7 +206,6 @@
     .hero-wrapper {
       background: #F7F6F2;
       position: relative;
-      overflow: hidden;
     }
     .hero-glow {
       position: absolute;
@@ -220,19 +219,19 @@
     .hero-wrapper:hover .hero-glow { opacity: 1; }
     .hero-blob {
       position: absolute;
-      top: 50%;
+      top: 40%;
       left: 50%;
-      transform: translate(-50%, -52%);
-      width: 680px;
-      height: 480px;
+      transform: translate(-50%, -50%);
+      width: 700px;
+      height: 500px;
       background: radial-gradient(ellipse at center,
-        rgba(168, 148, 210, 0.13) 0%,
-        rgba(180, 160, 220, 0.07) 35%,
+        rgba(155, 130, 210, 0.22) 0%,
+        rgba(165, 140, 215, 0.1) 45%,
         transparent 70%
       );
       pointer-events: none;
       z-index: 0;
-      filter: blur(32px);
+      filter: blur(48px);
     }
 
     /* Scroll reveal base states */
