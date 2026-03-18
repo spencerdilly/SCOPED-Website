@@ -7,6 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -417,7 +419,7 @@
       </a>
       <div style="display:flex;align-items:center;gap:2rem;">
         <a href="#founder" class="nav-link nav-about">About</a>
-        <a href="#contact" class="btn-primary" style="padding:0.5rem 1.25rem;font-size:0.8125rem;">Book a call</a>
+        <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/spencerdilworth'});return false;" class="btn-primary" style="padding:0.5rem 1.25rem;font-size:0.8125rem;">Book a call</a>
       </div>
     </div>
   </nav>
@@ -436,7 +438,7 @@
         AI is moving fast. We help businesses cut through the noise, get up to speed, and actually put it to work — so you stop watching from the sidelines and start seeing real growth.
       </p>
       <div class="hero-cta" style="display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;">
-        <a href="#contact" class="btn-primary">
+        <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/spencerdilworth'});return false;" class="btn-primary">
           Book a call
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -619,7 +621,7 @@
       <div style="position:absolute;top:-40%;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(ellipse at center, rgba(255,255,255,0.18) 0%, transparent 70%);pointer-events:none;"></div>
       <h2 style="font-family:'DM Sans',sans-serif;font-weight:800;font-size:clamp(2.25rem,5vw,4rem);letter-spacing:-0.04em;line-height:0.95;color:#3D3D3A;margin-bottom:1.75rem;">Let's scope<br/>your project.</h2>
       <p style="font-family:'DM Sans',sans-serif;font-size:0.9375rem;line-height:1.7;color:#8A8A82;max-width:420px;margin:0 auto 2.5rem;">Book a free 30-minute call. We'll learn about your business, figure out exactly where AI can help, and walk away with a clear picture of what your next move should be.</p>
-      <button onclick="openModal()" style="display:inline-flex;align-items:center;gap:0.5rem;background:#3D3D3A;color:#F7F6F2;font-family:'DM Sans',sans-serif;font-size:0.875rem;font-weight:500;padding:0.9375rem 2.25rem;border-radius:100px;border:none;cursor:pointer;transition:background 0.2s ease,transform 0.2s cubic-bezier(0.34,1.56,0.64,1);" onmouseover="this.style.background='#555552';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#3D3D3A';this.style.transform='translateY(0)'">
+      <button onclick="Calendly.initPopupWidget({url:'https://calendly.com/spencerdilworth'});return false;" style="display:inline-flex;align-items:center;gap:0.5rem;background:#3D3D3A;color:#F7F6F2;font-family:'DM Sans',sans-serif;font-size:0.875rem;font-weight:500;padding:0.9375rem 2.25rem;border-radius:100px;border:none;cursor:pointer;transition:background 0.2s ease,transform 0.2s cubic-bezier(0.34,1.56,0.64,1);" onmouseover="this.style.background='#555552';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#3D3D3A';this.style.transform='translateY(0)'">
         Book a call
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
